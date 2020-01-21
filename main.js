@@ -50,35 +50,36 @@ for (let i = 0; i < gatos.length; i++) {
     `;
   
 }
-console.log(acumuladoraCards)
+
 const tarjetaDeGatitos = document.getElementById("cards");
 
 tarjetaDeGatitos.innerHTML = acumuladoraCards;
-console.log(acumuladoraCards)
 
 const modal = document.getElementById("myModal");
 
-const botonAbrirModal = document.getElementsByTagName("img");
+const botonVerMas = document.getElementsByClassName("boton-vermas");
 const modalcontenido = document.querySelector(".modalcontent")
 
-for (let i = 0; i < botonAbrirModal.length; i++) {
-    botonAbrirModal[i].onclick = () => {
+for (let i = 0; i < botonVerMas.length; i++) {
+    botonVerMas[i].onclick = () => {
         console.log(`Cualquier cosa`)
         modal.classList.remove("nomostrar")
         
         modalcontenido.innerHTML = `
-        <img src=${gatos.img} alt=${gatos[i].name}>
         <div>
+        <img src=${gatos[i].img} alt=${gatos[i].name}>
+        </div>
+        <div class= "desc-long">
         <h3>${gatos[i].name}<h3>
         <p>${gatos[i].longDesc}</p></div>
         `
     }
     
 }
-const botonCerrarModal = document.getElementById("cerrarModal")
+  const botonCerrarModal = document.getElementById("cerrarModal")
 
 
-botonCerrarModal.onclick = () => {
-    console.log(`Aprete boton`)
-    modal.classList.add("nomostrar")
-}
+   botonCerrarModal.onclick = () => {
+   console.log(`Aprete boton`)
+     modal.classList.add("nomostrar")
+ }

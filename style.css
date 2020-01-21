@@ -58,14 +58,46 @@ article img {
     margin:10px;
     padding: 10px;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 
 }
 
+#cards div {
+    width: 20%;    
+}
 #cards img {
-    width: 40%;
+    width: 20%;
     height: auto;
 }
+#card:hover {
+    border: 1px solid #e9e2d0;
+  }
+
+#myModal {
+    width: 450px;
+    height: 350px;
+    position: fixed;
+    top: 30px;
+    left: 200px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 30px;
+    background-color: white
+}
+#myModal div img {
+    width: 50%;
+    height: auto;
+}
+
+.desc-long p{
+    font-size: 10px;
+}
+  .nomostrar {
+    display: none;
+}
+
 
 footer {
     background-color: #6e5773;
@@ -87,7 +119,4 @@ footer {
 
 .footer-icon div i{
  padding: 10px;
-}
-.nomostrar {
-    display: none;
 }
