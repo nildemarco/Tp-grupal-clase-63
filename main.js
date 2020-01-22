@@ -24,7 +24,7 @@ const gatos = [
       name: "Wosito",
       shortDesc: "Vivio toda su vida en la calle y todavia se asombra de cosas como estufas y escaleras.",
       longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
-      img: "http://www.placekitten.com/700"
+      img: "http://www.placekitten.com/900"
     },
   
     {

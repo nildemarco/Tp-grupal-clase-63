@@ -1,122 +1,144 @@
-body{
-    margin: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* COLORES */
+body {
+  margin: 0px;
+  color: #FFEDE1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
+.bar-nav {
+  background-color: #6D2451;
+  color: #D1ABA7;
+  width: 100%;
+  height: 70px;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between; }
 
-.bar-nav{
-    background-color: #6e5773;
-    color: #ffff;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    
-}
+.bar-nav i {
+  padding-right: 20px;
+  padding-top: 20px;
+  margin-bottom: 30px; }
+
+#hashtag {
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 30px; }
 
 article {
-    background-color:#e9e2d0;
-    color:black;
-    width: 700px;
-    height: 400px;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    
-}
+  background-color: #B691A8;
+  color: #420039;
+  height: 300px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
 
 .container-main {
-    width: 50%;
-}
+  width: 60%;
+  padding-left: 100px;
+  padding-right: 150px; }
+
 .container-main p {
-    font-size: 10px;
-}
+  font-size: 15px; }
 
 article img {
-    width: 100%;
-    height: auto;
-}
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
 
-#tarjetas-principal{
-    background-color:#e9e2d0;
-    width: 100%;
-    margin: 50px;
-
-}
+#tarjetas-principal {
+  background-color: #6D2451;
+  height: 400px;
+  width: 100%; }
 
 #cards {
-    background-color: #6e5773;
-    color: #ffff;
-    width: 100%;
-    height: 300px;
-    margin:10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-}
+  background-color: #6D2451;
+  color: #D1ABA7;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
 
 #cards div {
-    width: 20%;    
-}
+  width: 15%; }
+
 #cards img {
-    width: 20%;
-    height: auto;
-}
-#card:hover {
-    border: 1px solid #e9e2d0;
-  }
+  width: 90%;
+  height: auto;
+  border-radius: 25px; }
+
+#cards div:hover {
+  background-color: #B691A8;
+  color: #420039;
+  transition: 1s; }
+  #cards div:hover img {
+    width: 100%;
+    border-radius: 0px; }
 
 #myModal {
-    width: 450px;
-    height: 350px;
-    position: fixed;
-    top: 30px;
-    left: 200px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    padding: 30px;
-    background-color: white
-}
+  width: 500px;
+  height: 450px;
+  position: fixed;
+  top: 30px;
+  left: 200px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 30px;
+  background-color: #B691A8; }
+
 #myModal div img {
-    width: 50%;
-    height: auto;
-}
+  width: 60%;
+  height: auto; }
 
-.desc-long p{
-    font-size: 10px;
-}
-  .nomostrar {
-    display: none;
-}
+#myModal:hover {
+  background-color: #6D2451;
+  color: #D1ABA7;
+  transition: 1s; }
+  #myModal:hover img {
+    width: 60%; }
 
+.desc-long p {
+  font-size: 12px; }
+
+.nomostrar {
+  display: none; }
 
 footer {
-    background-color: #6e5773;
-    color: #e9e2d0;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
+  background-color: #B691A8;
+  color: #420039;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 
 .footer-icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
 
-.footer-icon div i{
- padding: 10px;
-}
+.footer-icon div i {
+  padding: 10px; }
+
+.boton-vermas {
+  background-color: #6D2451;
+  color: #D1ABA7;
+  box-shadow: 0 0 10px; }
+
+#cerrarModal {
+  background-color: #6D2451;
+  color: #D1ABA7;
+  box-shadow: -5px -5px 10px; }
