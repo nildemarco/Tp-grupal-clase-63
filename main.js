@@ -83,3 +83,9 @@ for (let i = 0; i < botonVerMas.length; i++) {
    console.log(`Aprete boton`)
      modal.classList.add("nomostrar")
  }
+
+ const formularioDeAdopcion = document.querySelector('form')
+
+ formularioDeAdopcion.onsubmit = e => {
+   e.preventDefault();
+ }

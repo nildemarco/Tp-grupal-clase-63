@@ -12,7 +12,7 @@
 
 <body>
     <nav class="bar-nav">
-        <div id ="hashtag"> #adoptADAS </div>
+        <div id="hashtag"> #adoptADAS </div>
         <div>
             <i class="fa fa-bars"></i>
         </div>
@@ -39,6 +39,34 @@
 
 
     </article>
+    <section id="formulario">
+        <h2>Formulario de adopcion</h2>
+        <form action="gatitos.html" method="get">
+            <label> Nombre:
+                <input type="text" name="nombre" placeholder="Ingresa tu nombre">
+            </label>
+            <label> Telefono:
+                <input type="text" name="telefono" placeholder="Ingresa tu telefono">
+            </label>
+            <label class="inline"> Color de pelaje:
+                <input type="checkbox" name="pelaje" value="negro">Negro
+                <input type="checkbox" name="pelaje" value="blanco">Blanco
+                <input type="checkbox" name="pelaje" value="gris">Gris
+                <input type="checkbox" name="pelaje" value="naranja">Naranja
+                <input type="checkbox" name="pelaje" value="amarillo">Amarrillo
+                <input type="checkbox" name="pelaje" value="rayado">Rayado
+            </label> 
+            <label class="inline"> Sexo:
+                <input type="radio" name="sexo" value="femenino">Femenino
+                <input type="radio" name="sexo" value="masculino">Masculino
+                <input type="radio" name="sexo" value="indiferente">Indiferente
+            </label>
+            <label>
+                <input id="submit" type="submit" name="enviar" value="Enviar">
+            </label>
+
+        </form>
+    </section>
 
     <section id="tarjetas-principal">
         <div id="cards">
