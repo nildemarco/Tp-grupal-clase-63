@@ -103,10 +103,6 @@ const nombreUsuario = inputsText[0]
 const telefonoUsuario = inputsText[1]
 
 
-
-
-//  console.log(radios)
-
 formularioDeAdopcion.onsubmit = e => {
   e.preventDefault();
 
@@ -134,7 +130,27 @@ formularioDeAdopcion.onsubmit = e => {
       console.log(`Elegiste las opciones ${opcionesElegidas.join(" , ")}`)
     }
   }
+  let acumuladoraColor = ""
 
+  for (let i = 0; i < gatos.length; i++) {
+
+    for (let x = 0; x < gatos[i].color.length; x++) {
+
+      if (gatos[i].color.includes(opcionesElegidas[x])) {
+
+        acumuladoraColor += `
+     <div>
+     <img src=${gatos[i].img} alt=${gatos[i].name}>
+     <h3>${gatos[i].name}</h3>
+     <p>${gatos[i].shortDesc}</p>
+     <button class="boton-vermas">Ver mas</button>
+     </div>`
+        break;
+      }
+
+    }
+    tarjetaDeGatitos.innerHTML = acumuladoraColor;
+  }
 
   let opcionesElegidasradio = ""
 
@@ -152,34 +168,32 @@ formularioDeAdopcion.onsubmit = e => {
   }
 
   let acumuladoraGatos = ""
-  
 
-      for (let i = 0; i < gatos.length; i++) {
-        if (gatos[i].sexo === opcionesElegidasradio) {
-          acumuladoraGatos += `
+  for (let i = 0; i < gatos.length; i++) {
+    if (gatos[i].sexo === opcionesElegidasradio) {
+      acumuladoraGatos += `
       <div>
       <img src=${gatos[i].img} alt=${gatos[i].name}>
       <h3>${gatos[i].name}</h3>
       <p>${gatos[i].shortDesc}</p>
       <button class="boton-vermas">Ver mas</button>
-      </div>
-      `;
+      </div>`;
 
-
-        }
-
-
-      }
-      tarjetaDeGatitos.innerHTML = acumuladoraGatos;
     }
-    
+    tarjetaDeGatitos.innerHTML = acumuladoraGatos;
 
-  
- 
+  }
 
-    
-  
-  
+  tarjetaDeGatitos.innerHTML = acumuladoraGatos;
+}
+
+
+
+
+
+
+
+
 
 
 
