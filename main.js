@@ -47,7 +47,6 @@ const gatos = [
 
 ]
 
-let acumuladoraCards = "";
 let acumuladora = ""
 
 const contenedoraDeCards = (acumuladora) => {

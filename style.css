@@ -94,14 +94,12 @@ article img {
   align-items: center;
   margin-top: 50px;
   margin-bottom: 50px; }
-
-#cards div {
-  width: 15%; }
-
-#cards img {
-  width: 90%;
-  height: auto;
-  border-radius: 25px; }
+  #cards div {
+    width: 15%; }
+  #cards img {
+    width: 90%;
+    height: auto;
+    border-radius: 25px; }
 
 #cards div:hover {
   background-color: #B691A8;
@@ -147,14 +145,12 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-
-.footer-icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-
-.footer-icon div i {
-  padding: 10px; }
+  footer .footer-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    footer .footer-icon div {
+      padding: 10px; }
 
 .boton-vermas {
   background-color: #6D2451;
