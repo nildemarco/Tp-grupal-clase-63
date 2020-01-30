@@ -48,23 +48,39 @@ const gatos = [
 ]
 
 let acumuladoraCards = "";
+let acumuladora = ""
 
-
-for (let i = 0; i < gatos.length; i++) {
-  acumuladoraCards += `
-    <div>
-    <img src=${gatos[i].img} alt=${gatos[i].name}>
-    <h3>${gatos[i].name}</h3>
-    <p>${gatos[i].shortDesc}</p>
-    <button class="boton-vermas">Ver mas</button>
-    </div>
-    `;
-
+const contenedoraDeCards = (acumuladora) => {
+  for (let i = 0; i < gatos.length; i++) {
+    acumuladora += `
+  <div>
+  <img src=${gatos[i].img} alt=${gatos[i].name}>
+  <h3>${gatos[i].name}</h3>
+  <p>${gatos[i].shortDesc}</p>
+  <button class="boton-vermas">Ver mas</button>
+  </div>
+  `;
+  }
+  return acumuladora
 }
+
+// for (let i = 0; i < gatos.length; i++) {
+
+  
+   // acumuladoraCards += `
+   //   <div>
+   //   <img src=${gatos[i].img} alt=${gatos[i].name}>
+   //   <h3>${gatos[i].name}</h3>
+   //   <p>${gatos[i].shortDesc}</p>
+   //   <button class="boton-vermas">Ver mas</button>
+   //   </div>
+   //   `;
+
+// }
 
 const tarjetaDeGatitos = document.getElementById("cards");
 
-tarjetaDeGatitos.innerHTML = acumuladoraCards;
+tarjetaDeGatitos.innerHTML = contenedoraDeCards(acumuladora);
 
 const modal = document.getElementById("myModal");
 
@@ -180,12 +196,11 @@ formularioDeAdopcion.onsubmit = e => {
       </div>`;
 
     }
-    tarjetaDeGatitos.innerHTML = acumuladoraGatos;
+    tarjetaDeGatitos.innerHTML += acumuladoraGatos;
 
   }
 
-  tarjetaDeGatitos.innerHTML = acumuladoraGatos;
-}
+}  
 
 
 
