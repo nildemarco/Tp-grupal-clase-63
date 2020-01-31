@@ -47,39 +47,42 @@ const gatos = [
 
 ]
 
-let acumuladora = ""
 
-const contenedoraDeCards = (acumuladora) => {
-  for (let i = 0; i < gatos.length; i++) {
-    acumuladora += `
+let acumuladoraCards = "";
+
+
+const contenedoraDeCards = (arrDeGatitos) => {
+  for (let i = 0; i < arrDeGatitos.length; i++) {
+    acumuladoraCards += `
   <div>
-  <img src=${gatos[i].img} alt=${gatos[i].name}>
-  <h3>${gatos[i].name}</h3>
-  <p>${gatos[i].shortDesc}</p>
+  <img src=${arrDeGatitos[i].img} alt=${arrDeGatitos[i].name}>
+  <h3>${arrDeGatitos[i].name}</h3>
+  <p>${arrDeGatitos[i].shortDesc}</p>
   <button class="boton-vermas">Ver mas</button>
   </div>
   `;
   }
-  return acumuladora
+  return acumuladoraCards
 }
+
 
 // for (let i = 0; i < gatos.length; i++) {
 
-  
-   // acumuladoraCards += `
-   //   <div>
-   //   <img src=${gatos[i].img} alt=${gatos[i].name}>
-   //   <h3>${gatos[i].name}</h3>
-   //   <p>${gatos[i].shortDesc}</p>
-   //   <button class="boton-vermas">Ver mas</button>
-   //   </div>
-   //   `;
+
+// acumuladoraCards += `
+//   <div>
+//   <img src=${gatos[i].img} alt=${gatos[i].name}>
+//   <h3>${gatos[i].name}</h3>
+//   <p>${gatos[i].shortDesc}</p>
+//   <button class="boton-vermas">Ver mas</button>
+//   </div>
+//   `;
 
 // }
 
 const tarjetaDeGatitos = document.getElementById("cards");
 
-tarjetaDeGatitos.innerHTML = contenedoraDeCards(acumuladora);
+tarjetaDeGatitos.innerHTML = contenedoraDeCards(gatos);
 
 const modal = document.getElementById("myModal");
 
@@ -154,12 +157,12 @@ formularioDeAdopcion.onsubmit = e => {
       if (gatos[i].color.includes(opcionesElegidas[x])) {
 
         acumuladoraColor += `
-     <div>
-     <img src=${gatos[i].img} alt=${gatos[i].name}>
-     <h3>${gatos[i].name}</h3>
-     <p>${gatos[i].shortDesc}</p>
-     <button class="boton-vermas">Ver mas</button>
-     </div>`
+        <div>
+        <img src=${gatos[i].img} alt=${gatos[i].name}>
+        <h3>${gatos[i].name}</h3>
+        <p>${gatos[i].shortDesc}</p>
+        <button class="boton-vermas">Ver mas</button>
+        </div>`
         break;
       }
 
@@ -199,7 +202,7 @@ formularioDeAdopcion.onsubmit = e => {
 
   }
 
-}  
+}
 
 
 
