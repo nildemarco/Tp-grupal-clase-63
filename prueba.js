@@ -49,29 +49,23 @@ const gatos = [
 
 //FUNCION ACC DE TARJETAS
 
-
-
 const contenedoraDeCards = (arrDeGatitos) => {
-    let acumuladoraCards = "";
-    for (let i = 0; i < arrDeGatitos.length; i++) {
-        acumuladoraCards += `
-    <div>
-    <img src=${arrDeGatitos[i].img} alt=${arrDeGatitos[i].name}>
-    <h3>${arrDeGatitos[i].name}</h3>
-    <p>${arrDeGatitos[i].shortDesc}</p>
-    <button class="boton-vermas">Ver mas</button>
-    </div>
-    `;
-    }
-    return acumuladoraCards
-}
+    return arrDeGatitos.reduce((acc, curr) => {
+        return acc + `<div>
+        <img src=${curr.img} alt=${curr.name}>
+        <h3>${curr.name}</h3>
+        <p>${curr.shortDesc}</p>
+        <button class="boton-vermas">Ver mas</button>
+        </div>
+        `;
+    }, "")
 
+}
 const tarjetaDeGatitos = document.getElementById("cards");
 
 tarjetaDeGatitos.innerHTML = contenedoraDeCards(gatos);
 
 //MODAL BOTON VER MAS
-
 
 const modal = document.getElementById("myModal");
 
@@ -79,7 +73,7 @@ const botonVerMas = document.getElementsByClassName("boton-vermas");
 const modalcontenido = document.querySelector(".modalcontent")
 for (let i = 0; i < botonVerMas.length; i++) {
     botonVerMas[i].onclick = () => {
-        console.log(`Cualquier cosa`)
+        
         modal.classList.remove("nomostrar")
 
         modalcontenido.innerHTML = `
